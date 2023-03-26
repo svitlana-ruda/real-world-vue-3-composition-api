@@ -8,11 +8,6 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/:pathMatch(.*)',
-      name: 'NotFoundView',
-      component: NotFoundView,
-    },
-    {
       path: '/',
       name: 'event-list',
       component: EventListView,
@@ -27,6 +22,11 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: AboutView,
+    },
+    {
+      path: '/:pathMatch(.*)',
+      name: 'NotFoundView',
+      component: NotFoundView,
     },
   ],
 });
